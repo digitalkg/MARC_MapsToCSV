@@ -1,0 +1,7 @@
+from pymarc import MARCReader
+with open('NameofYourMARCfile.mrc', 'rb') as fh:
+    reader = MARCReader(fh)
+    for record in reader:
+        print(record['245']['a']), #prints 245 subfield a
+        print(record['100']['a']), #prints 100 subfield a
+        print(record['650']['a'])  #prints 650 subfield a
